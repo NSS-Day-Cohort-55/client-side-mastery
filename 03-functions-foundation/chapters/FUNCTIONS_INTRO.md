@@ -184,5 +184,5 @@ If you're still stuck after using the starter code, you can peek at the final so
     fillGasTank(22)
 </details>
 
-> REQUIRED Use git to add and commit your changes. Rmember to use `git status` after each command to make sure it's working properly. Then push your changes to Github.
+> REQUIRED Use git to add and commit your changes. Remember to use `git status` after each command to make sure it's working properly. Then push your changes to Github.
 > TIP: You can type `git log` to see that git keeps track of each of your commits in order. Type `q` to exit that view if needed.
