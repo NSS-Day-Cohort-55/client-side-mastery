@@ -167,22 +167,9 @@ The first thing you need to do is create a new repository on Github's platform.
 1. Choose "New repository".
 1. In the "Repository name" field, enter in `functions-practice`.
 1. Scroll down and click the green "Create Repository" button. ( Be sure to skip all the other options. Leave the repo public and do not check any of the checkboxes )
-1. From the on-screen instructions, follow the second set of instructions.
+1. From the on-screen instructions, follow the second set of instructions. Copy and paste the commands into your terminal, making sure you are still in the directory where you created your local git repo 
     ![](./images/add-origin.png)
 
-Now that the code has successfully been uploaded, go back to your browser, and refresh the page. You will see your remote repository with the functions practice files.
+What does that do? It connects your local git repo to your remote Github repo and then pushes a copy of your code files to Github. Now that the code has successfully been uploaded, go back to your browser, and refresh the page. You will see your remote repository with the functions practice files. If not, don't panic. Find a teammate who got it to work and try to diagnose the problem. Call in an instructor if you hit any roadblocks. 
 
-
-## Practice: Create Repos and Back-up Your Exercises
-
-* Create a Github repository for the Congressional Representative exercise, and push up that code.
-* Create a Github repository for the in class demo, and push up that code.
-* Create a Github repository for your Journal and push up the code.
-
-When you are done, you should have new repositories in your Github account including:
-
-1. Coffee Houses
-1. Congressional Representative
-1. In class demo
-
-> **Tip:** If you have any issues getting your code onto Github, see a member of the instruction team immediately. **Pushing your code to Github is not optional. It's a required part of this program.**
+> Note: You will only need to run `git remote add origin` once per local-to-remote connection. But -- you will likely push your code up multiple times per project. More on that later!
