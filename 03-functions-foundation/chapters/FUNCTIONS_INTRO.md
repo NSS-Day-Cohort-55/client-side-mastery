@@ -111,7 +111,7 @@ It's difficult to express how critically important it is for you to understand f
 
 ## Practice: Filling the Tank
 
-You have some starter code provided. It's a blank function that defines the task of filling your car up with gas. You can see that the minion will let you know that it filled up the car with gas, but **you** need to tell it how much gas you want put into the tank.
+You have some starter code provided. It's a blank function that defines the task of filling your car up with gas. You can see that the minion will let you know that it filled up the car with gas, but **you** need to tell it how much gas you want put into the tank. To write this code, navigate to the project you created in the earlier git chapter and open `main.js`
 
 > #### `workspace/functions-intro/main.js`
 
@@ -183,3 +183,6 @@ If you're still stuck after using the starter code, you can peek at the final so
     fillGasTank(15)
     fillGasTank(22)
 </details>
+
+> REQUIRED Use git to add and commit your changes. Rmember to use `git status` after each command to make sure it's working properly. Then push your changes to Github.
+> TIP: You can type `git log` to see that git keeps track of each of your commits in order. Type `q` to exit that view if needed.
