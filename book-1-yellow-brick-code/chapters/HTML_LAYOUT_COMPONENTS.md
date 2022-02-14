@@ -222,7 +222,7 @@ Use the above HTML and Flexbox to achieve the following layout. You don't need t
 
 ![flexbox layout](./images/coffeehouses-flexbox.png)
 
-* Once you complete this part, create a repo on GitHub and push your project.
+> REQUIRED: Once you complete this part, create a local repo. Add and commit your code. Remember to use a short, descriptive commit message. Then make a repo on GitHub and push your project. DO NOT skip this. If you are unsure about doing these steps correctly, now is the time to reach out for help. Everyone struggles with git and Github at first, but it is absolutely vital that you use it every day. It will be 100% expected that you are a practiced git user once you start looking for your first dev job.
 
 #### Part 2 - Creating visual hierarchies
 
@@ -234,7 +234,7 @@ Example layout for one shop (don't forget the additional information)
 
 ![example layout](images/coffee-shop-layout.png)
 
-Once you complete this part, push your project to GitHub.
+> Once you complete this part, add and commit again, then push your project to GitHub.
 
 ## Practice: Congressional Representative
 #### Part 1
@@ -257,7 +257,7 @@ You're going to create an HTML component to represent a political candidate. Spe
 
 Make sure you use good BEM-style class names for each element in your components. Put a comment above each component explaining what it is.
 
-Once you complete this part, push your project to GitHub.
+> REQUIRED: Once you complete this part, initialize a local git repo in this project's directory. Add and commit your work. Then create a repo on Github and push up your project.
 
 
 #### Part 2
@@ -273,7 +273,7 @@ How to improve scan-ability?
 
 1. Text with background color/image - ensure the copy (text color) has good contrast and is legible. Included with Chrome Dev Tools is an Audit panel. Run an Audit on the page and determine if the text color has appropriate contrast. More information: https://developer.chrome.com/docs/devtools/accessibility/reference/
 
-Once you complete this part, push your project to GitHub.
+> Once you complete this part, add and commit your changes, then push your project to GitHub.
 
 
 ## Coffee Houses Text and Background Colors
