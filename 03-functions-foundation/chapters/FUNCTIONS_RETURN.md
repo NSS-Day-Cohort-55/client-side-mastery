@@ -67,10 +67,10 @@ cd workspace
 mkdir functions-parameters
 cd functions-parameters
 touch main.js
-code .
 ```
+OR, you can use the `mg` and `simplehtml` commands from the terminal chapters. It's your choice. There are many ways to solve problems, even ones as simple as "I need to create a new project." Quick thought exercise while we're on the subject -- why might you use one way of creating a project over the other? What are the pros and cons of each? Take a moment to write down your thoughts. It's a super simple problem, but thinking about which approach to creating a new project you want to use will prepare you for much bigger problems abd decisions down the line. Bonus points if you bring this up in the next live coding session and ask the instructors if you can discuss your thoughts on this. 
 
-Once VS Code starts, open the `main.js` file and follow the instructions below.
+However you get your files ready to roll, finish setup with a quick `code .` Once VS Code starts, open the `main.js` file and follow the instructions below.
 
 ### Instructions
 
@@ -179,3 +179,5 @@ You can expand the hints below if you are stuck and don't know what to do. Make 
     // Log the return value
     console.log(result)
 </details>
+
+> NOTE: Of course you noticed that this is a whole new project in a new directory ( `functions-parameters` ) with its own set of files. You know what that means. Time to initialize a new git repo ( `git init` ) and prepare your code for pushing to Github. You know the drill by now. If not, review the git chapter again and give it a shot. Still intimidated by git and Github? Run right at it, not away from it. You will be using git every day. Now is the time to practice it and ask for help!
