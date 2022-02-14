@@ -37,13 +37,13 @@ Bookmark the [devdocs.io](https://devdocs.io/) site. It contains documentation f
 
 # Installations
 
-## Rectangle
+## Spectacle
 
-_NOTE: If your Mac has an M1 ARM processor, install [Rectangle](#rectangle) instead._
+_NOTE: If your Mac has an M1 ARM processor, install [Rectangle](https://rectangleapp.com/) instead._
 
 This application will allow you to use certain combinations of keys on your keyboard to move and resize applications while you are developing.
 
-[Download and install Rectangle](https://www.rectangleapp.com/) and after it is installed, open the application to try it out.
+[Download and install Spectacle](https://www.spectacleapp.com/) and after it is installed, open the application to try it out.
 
 <a id="homebrew"></a>
 
