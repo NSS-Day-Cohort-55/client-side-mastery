@@ -173,3 +173,5 @@ The first thing you need to do is create a new repository on Github's platform.
 What does that do? It connects your local git repo to your remote Github repo and then pushes a copy of your code files to Github. Now that the code has successfully been uploaded, go back to your browser, and refresh the page. You will see your remote repository with the functions practice files. If not, don't panic. Find a teammate who got it to work and try to diagnose the problem. Call in an instructor if you hit any roadblocks. 
 
 > Note: You will only need to run `git remote add origin` once per local-to-remote connection. But -- you will likely push your code up multiple times per project. More on that later!
+
+> **Tip:** If you have any issues getting your code onto Github, see a member of the instruction team immediately. **Pushing your code to Github for every exercise and project is not optional. It's a required part of this program.**
