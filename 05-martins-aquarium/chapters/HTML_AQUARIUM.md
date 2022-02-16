@@ -60,7 +60,7 @@ The more time you spend in the design stage, the less code you need to write.
 
 ## Vocabulary To Learn
 
-> **Properties:** Imagine a chair. Now imagine that you have to write a poem or other paper about the chair. How would you describe it? It could be a tall, white chair. It could be uncomfortable. You could say when it was purchased. When you describe something, you often list its properties. A property of something is just a specific feature of that thing. From the short description above, here are the properties of the chair you were imagining.
+> **Properties:** Imagine a chair. Now imagine that you have to write a poem or other paper about the chair. How would you describe it? It could be a tall, white chair. It could be uncomfortable. You could say when it was purchased. When you describe something, you often list its properties. A property of something is just a specific feature of that thing. From the short description above, here are the `properties` of the chair you were imagining.
 >   1. Height
 >   1. Color
 >   1. Comfort level
@@ -68,11 +68,11 @@ The more time you spend in the design stage, the less code you need to write.
 
 ## Discussion Points
 
-1. What are the components?
+1. What are components?
 1. What do you think the layout of the site should be?
-1. What are the properties of each fish that you will be representing in your HTML?
-1. What are the properties of the fish care tips that Martin wants on the side?
-1. What are the properties of the locations Martin has visited?
+1. What are the `properties` of each fish that you will be representing in your HTML?
+1. What are the `properties` of the fish care tips that Martin wants on the side?
+1. What are the `properties` of the locations Martin has visited?
 1. What should be the class names for each?
 1. Which semantic tags should you use?
 1. How can we use Flexbox to build a better layout of fish and locations?
@@ -80,4 +80,4 @@ The more time you spend in the design stage, the less code you need to write.
 
 ## Time to Build
 
-The instruction team will lead the class through the construction of Martin's Aquarium. You may follow along, or you can close your computer and watch what gets built and offer your suggestions.
+The instruction team will lead the class through the construction of Martin's Aquarium. You may follow along, or you can close your computer and watch. Be sure to ask questions and give suggestions.
