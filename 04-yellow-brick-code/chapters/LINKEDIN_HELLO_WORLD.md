@@ -20,3 +20,11 @@ I built a project with 3 teammates that was a travel brochure application that l
 The most important lesson I learned during this group project was how important it is to plan your components, structure, layout, and modules before you start writing code. I also learned how git and Github can help a team work on a project together effectively.
 
 
+# Update your Github Profile
+
+Your Github profile allows you to customize pinned projects to your profile. You will `fork` this project into your account. Thus allowing you to pin it.
+
+Be sure to complete the following:
+1. `README.md` - Project name, description, how to run and technology, team members, wireframes, and your contribution.
+2. Project Description - displays on the pinned item
+3. Set your contributions to allow tracking off private repos.
