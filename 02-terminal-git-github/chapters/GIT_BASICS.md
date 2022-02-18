@@ -60,10 +60,7 @@ git config --global pull.rebase false
 
 ## Create a Git Repository
 
-1. With terminal, use your newly created 
-    ```sh
-    cd ~/workspace/coffee-houses
-    ```
+1. With terminal, use any of your newly created exercises you've been working on.
 1. Type in the `git init` command
 1. You now have an empty git repository - meaning nothing has been tracked yet.
 
@@ -100,24 +97,7 @@ git commit -m "Message about commit"
 
 As you work on projects, adding the needed HTML, CSS, and/or JavaScript, you will find that there are moments when you want to preserve what you have written. It's not enough just to hit 'save' and move on, like you do in your favorite word processor. With git you will preserve snapshots of your code, called *commits*, that allow you to preserve a timeline of your progress. For practice exercises you may only make a single commit, but for larger assigments and certainly on full-blown applications you will end up making many commits over time.  
 
-Before you can try making your first commit, you need to code to commit! Time to practice creating a new project with the bash functions you wrote in the previous chapter, and then tell git that you want to track all of your new files. Make sure you're in your `workspace` directory. Then create a project called `functions-practice`
-
-```sh
-mg functions-practice
-```
-
-Create the boilerplate files for it
-
-```sh
-simplehtml
-```
-
-You can open your code in VS Code to take a look to make sure everything was created properly
-
-```sh
-code .
-```
-If it all looks good and you're ready to preserve this code so you don't lose all your hard work ( just pretend you spent hours sweating over this project, ok? ), then it's time to track the changes by staging the files with the `add` command. This tells git that you want to add any changes since the last commit to the next commit you make. Since this is your first commit on this project, it will add all the files you just created.
+When you're ready to preserve code so you don't lose all your hard work, then it's time to track the changes by staging the files with the `add` command. This tells git that you want to add any changes since the last commit to the next commit you make. Often you will want to add all the files you just created.
 
 ```sh
 git add --all
