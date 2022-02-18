@@ -27,4 +27,4 @@ Your Github profile allows you to customize pinned projects to your profile. You
 Be sure to complete the following:
 1. `README.md` - Project name, description, how to run and technology, team members, wireframes, and your contribution.
 2. Project Description - displays on the pinned item
-3. Set your contributions to allow tracking off private repos.
+3. Set your contributions to allow tracking of private repos.

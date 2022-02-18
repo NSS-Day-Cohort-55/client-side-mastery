@@ -18,8 +18,9 @@ This was our second group project at Nashville Software School, and we used HTML
 The most important lesson I learned during this group project was how important it is to plan your components, structure, layout, and modules before you start writing code. I also learned how git and Github can help a team work on a project together effectively.
 
 ## Github
-Continue to craft your Github profile you highlight your projects. 
+Continue to craft your Github profile and highlight your projects. 
 
+* Fork this project to your account
 * Pin a project to your profile view
 * Complete the project descriptions with relevant information
 * Create a README.md for the project

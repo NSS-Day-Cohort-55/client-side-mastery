@@ -1,5 +1,3 @@
-# Book 3 - The Apprentice
-
 In this book, you will be learning the concepts and tools of React. React is a component based UI library for the browser.
 
 | #  | Chapter | Concepts | Practice
@@ -41,7 +39,6 @@ In this book, you will be learning the concepts and tools of React. React is a c
 
 #### Supplemental Chapters
 * [Class-based Components](./chapters/CLASS_BASED_COMPONENTS.md)
-
 * [Reusable, Generic React Components](./chapters/REACT_GENERIC_COMPONENTS.md)
 * [Deploy React and API to Heroku](./chapters/JSON_SERVER_HEROKU.md)
 * [Authentication with Auth0](https://auth0.com/blog/reactjs-authentication-tutorial/)
@@ -50,5 +47,3 @@ In this book, you will be learning the concepts and tools of React. React is a c
 * [Using Docker for Deployments](./chapters/DOCKER_INTRO.md)
 * [Deploy to AWS S3](./chapters/AWS_S3.md)
 * [Deploy to AWS EC2](./chapters/AWS_EC2.md)
-
-After completing this book, you will be considered apprentice developers, and will be ready to move on to the final three months of the course. Those final months are your apprenticeship, where you will be trained on how to work on a professional software development team.

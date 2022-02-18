@@ -1,8 +1,6 @@
-# Book 2
-
 ## Chapters
 
-| # | Chapter | 📔 <br/> Practice/Daily Journal |
+| # | Chapter | 📔 Practice |
 | -- | -- |  --- |
 |<h4>1</h4> | [Intro To GiffyGram](chapters/47-GG-Intro.md) |  |
 |<h4>2</h4> |[GiffyGram ERD](chapters/47-GG-ERD.md) | <ul><li>[Daily Journal ERD](chapters/47-GG-ERD.md#DJ-ERD)</li><li>[Martin's Aquarium ERD](chapters/47-GG-ERD.md#MA-ERD)</li></ul>
@@ -34,7 +32,7 @@
 
 ## Chapters
   
-| # | Chapter | 📔 <br/> Practice/Daily Journal
+| # | Chapter | 📔 Practice
 --- | --- | ---
 |<h4>*</h4> |Update LinkedIn | |
 |<h4>15</h4> |[Delete A Post](chapters/47-GG-DeletePost.md) | <ul><li> [Update Journal with delete functionality](chapters/47-GG-DeletePost.md#DJ-Practice)</li></ul>
