@@ -22,9 +22,16 @@ The most important lesson I learned during this group project was how important 
 
 # Update your Github Profile
 
+[Kick Up Your Github](https://docs.google.com/presentation/d/124u03j-d49Hh93gQZdh0I1Eq8ev8lQz6lXqODZytLJE/edit?usp=sharing)
+
 Your Github profile allows you to customize pinned projects to your profile. You will `fork` this project into your account. Thus allowing you to pin it.
 
 Be sure to complete the following:
 1. `README.md` - Project name, description, how to run and technology, team members, wireframes, and your contribution.
-2. Project Description - displays on the pinned item
+2. Project Description - displays on the pinned item within Github
 3. Set your contributions to allow tracking of private repos.
+
+### Resources
+* [MakeAReadme.com](https://www.makeareadme.com/)
+* [MD Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
+* [Markdown Quick Reference](https://www.markdownguide.org/cheat-sheet/)

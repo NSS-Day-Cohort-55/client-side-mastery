@@ -17,10 +17,17 @@ This was our second group project at Nashville Software School, and we used HTML
 
 The most important lesson I learned during this group project was how important it is to plan your components, structure, layout, and modules before you start writing code. I also learned how git and Github can help a team work on a project together effectively.
 
-## Github
+## Update your Github Profile
 Continue to craft your Github profile and highlight your projects. 
+
+[Kick Up Your Github](https://docs.google.com/presentation/d/124u03j-d49Hh93gQZdh0I1Eq8ev8lQz6lXqODZytLJE/edit?usp=sharing)
 
 * Fork this project to your account
 * Pin a project to your profile view
 * Complete the project descriptions with relevant information
 * Create a README.md for the project
+
+### Resources
+* [MakeAReadme.com](https://www.makeareadme.com/)
+* [MD Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
+* [Markdown Quick Reference](https://www.markdownguide.org/cheat-sheet/)
