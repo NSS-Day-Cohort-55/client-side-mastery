@@ -9,7 +9,7 @@
 | 1| [Planning Martin's Aquarium](./chapters/HTML_AQUARIUM.md) <br/> <sub style="font-size:0.85rem;">#html #wireframe #file setup</sub> |  |
 | 2 | [Data Structures and Fish](./chapters/BASIC_DATA_STRUCTURES.md) <br/> <sub style="font-size:0.85rem;">#data types #object</sub> |  |
 | 3 | [Using the Fish Data](./chapters/EXPORTING_FISH.md) <br/> <sub style="font-size:0.85rem;">#components #import #export #array iteration</sub> | [Journal Entry Objects](./chapters/DAILY_JOURNAL_OBJECT_DOM.md) |
-| 4 | [Automate HTML Representations of Fish](./chapters/CREATING_FISH_COMPONENTS.md) <br/> <sub style="font-size:0.85rem;">#components #dom</sub> | [Display List of Entries](./chapters/DAILY_JOURNAL_DATA_DOM.md)  |
+| 4 | [Automate HTML Representations of Fish](./chapters/CREATING_FISH_COMPONENTS.md) <br/> <sub style="font-size:0.85rem;">#components #dom</sub> | 1. Fish Tips and Locations<br />2. [Display List of Journal Entries](./chapters/DAILY_JOURNAL_DATA_DOM.md)  |
 | 5 | 🐞 Developer Tools<br/>[Debugging With Developer Tools](./chapters/DEBUG_WITH_DEVTOOLS.md)  <br/><sub style="font-size:0.85rem;">#debugging</sub> | |
 | 6 | [Accelerate your Git Workflow](./chapters/GIT_CLI_SHORTCUTS.md) <br/> <sub style="font-size:0.85rem;">#cli shortcuts #alias #terminal</sub> |  |
 | 👨‍👨‍👦‍👦 | [**_Group Project: Automated World_**](https://github.com/nss-day-cohort-51/automated-world) |  |
