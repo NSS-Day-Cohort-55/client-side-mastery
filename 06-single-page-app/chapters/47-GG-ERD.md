@@ -21,6 +21,7 @@ For Giffygram, here is the list of the main resources that need to be represente
 1. Users - People who use the application.
 1. Posts - Users will create new Posts with animation GIFs in them.
 1. Messages - Users will send Messages to other Users of the application.
+1. Likes - Users will be able to mark posts as a favorite.
 
 Additionally, a major feature of this application is that Users should have the ability to like Posts from other Users, just as you see on the major social media platforms.
 
@@ -61,6 +62,12 @@ Ref: "users"."id" < "posts"."userId"
  Create a table for Messages.
  * What are the properties associated with a single Message?
  * How do you connect Messages to Users and recipients?
+ * Share your diagram with a member of the instruction team.
+
+ ### Practice: Likes Table
+ Create a table for Likes.
+ * What are the properties associated with a single Like?
+ * How do you connect Likes to Posts?
  * Share your diagram with a member of the instruction team.
 
   ### <h3 id="DJ-ERD"> Practice: Create an ERD for your Daily Journal</h3>
