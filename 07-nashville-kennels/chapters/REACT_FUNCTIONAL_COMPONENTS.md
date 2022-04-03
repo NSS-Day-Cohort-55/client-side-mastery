@@ -1,4 +1,4 @@
-## Getting Started with Components
+## Getting Started with Functional Components
 
 ### Vocabulary To Learn
 * JSX

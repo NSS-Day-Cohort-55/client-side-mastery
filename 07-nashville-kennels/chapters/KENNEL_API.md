@@ -3,11 +3,12 @@
 Before you start building your React application, you need a database to persist the data for it. Please follow these steps to get it set up.
 
 ```sh
-cd ~/workspace/kennels
+cd ~/workspace
 mkdir kennel-api
 cd kennel-api
 touch database.json
 ```
+* The kennel-api is in a different directory than the kennel. Treat this like an external API.
 
 Then copy the following JSON into the `database.json` file.
 
@@ -15,14 +16,19 @@ Then copy the following JSON into the `database.json` file.
 {
     "animals": [
         { "id": 1, "name": "Doodles", "breed": "Poodle"},
-        { "id": 2, "name": "Decker", "breed": "German Shepherd" },
+        { "id": 2, "name": "Parsley", "breed": "Great Dane" },
         { "id": 3, "name": "Esme", "breed": "Pitbull" }
     ],
     "customers": [
         {
             "id": 1,
-            "name": "Hannah Hall",
-            "address": "7002 Chestnut Ct"
+            "name": "Luke Skywalker",
+            "address": "976 Tatooine Dr."
+        },
+         {
+            "id": 2,
+            "name": "Padmé Amidala",
+            "address": "1211 Naboo Lane"
         }
     ],
     "employees": [],
@@ -47,4 +53,8 @@ Every time you want to work on your Nashville Kennels application, you'll need t
 json-server -p 5002 -w database.json
 ```
 
-Add some example data for employees, locations and owners to kennel-api/database.json.
+Go ahead and create a few more pets and customers within each's collections.
+
+## Backup to Github
+Make sure you create a repository on your Github account for your API, and hook up the kennel-api directory. Yes, there's only one file being tracked in this repository, and that's ok.
+

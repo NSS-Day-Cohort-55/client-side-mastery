@@ -4,6 +4,7 @@
 * useState
 * deconstruct object
 * React props
+* key property
 
 
 In this chapter, you are going to make your application dynamic. In React, data can be passed to components. This is similar to passing arguments to functions, yet different.
@@ -22,7 +23,7 @@ An example of using state
 const [animals, setAnimals] = useState([]);
 ```
 
-State is initialized by the value passed to the `useState()` function at the top of the component. The `useState()` function returns both the current value of the state and a function for updating that value. Currently, our **`<AnimalList />`** has the state of animals defined as an empty array. Once we get the data from the API we invoke `setAnimal()` with the animal data. This will change the state and **Each time state changes, component will re-render.**
+State is initialized by the value passed to the `useState()` function at the top of the component. The `useState()` function returns both the current value of the state and a function for updating that value. Currently, our **`<AnimalList />`** has the state of animals defined as an empty array. Once we get the data from the API we invoke `setAnimal()` with the animal data. This will change the state and **EACH time state changes, the component will re-render.**
 
 ### A Few Rules for state and props
 
@@ -65,14 +66,20 @@ Because **`<AnimalCard />`** is included in the render method of **`<AnimalList 
 
 Modify the **`<AnimalCard />`** render method to display the props using dot notation.
 
+The below AnimalCard contains a picture of a dog. You may add this image to your code or use a different one.
+
+Place whichever dog image into `public/images` If this directory does not exist, create it.
+
+[Dog Image (./images/dog.svg)](./images/dog.svg)
+
 ```js
 export const AnimalCard = ({ animal }) => {
   return (
     <div className="card">
       <div className="card-content">
         <picture>
-          <img src={require('./dog.svg')} alt="My Dog" />
-        </picture>
+            <img src={'/images/dog.svg'} alt="My Dog" />
+          </picture>
         <h3>Name: <span className="card-petname">
           {animal.name}
         </span></h3>
@@ -92,6 +99,10 @@ touch components/animal/Animal.css
 > components/animal/Animal.css
 
 ```css
+img {
+  width: 50px;
+}
+
 .card {
   /* Add shadows to create the "card" effect */
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
@@ -141,24 +152,47 @@ touch components/animal/Animal.css
 }
 ```
 
-Note: you will import this CSS file directly into the AnimalCard component. Good practice would be to only import CSS that applies to the JSX elements of this component.
+**Note:** you will import this CSS file directly into the AnimalCard component. Good practice would be to only import CSS that applies to the JSX elements of this component.
 
 ## Expressing State as HTML
 
 An important aspect of understanding why React works the way it does is to realize that its core mechanism is to **_express state as HTML_**.
 
-Gone are the days of using Vanilla JavaScript or jQuery to directly manipulate your DOM. You should never write an `appendChild()`, or `document.querySelector("#foo").innerHTML = ""` in your code.
+Gone are the days of using Vanilla JavaScript or jQuery to directly manipulate your DOM. You should never write an `appendChild()`, or `document.querySelector("#foo").innerHTML = ""` in your React code.
 
-State is at the core of React. It drives everything, including the HTML representation of that state via JSX. If you want to change the DOM that is displayed to your customer, you **change the state of the component**.
+State is at the core of React. It drives everything, including the HTML representation of that state via JSX. If you want to change the DOM that is displayed in the browser, you **change the state of the component**.
 
-To change state, you _must_ use appropriate `setXXX()` function, in turn, re-renders the component. **Changing state is the only way to modify the DOM.**
+To change state, you _must_ use the appropriate `setXXX()` function, and in turn this re-renders the component. **Changing state is the only way to modify the DOM.**
 
-* If you remove an item from a collection(array) in state, then that element will not be rendered.
+* If you remove an item from a collection(array) in state, it will not be rendered.
 * If you add an item to a collection in state, then it will be rendered.
-* If you modify an object that is used in your JSX, then it will change when the component is re-rendered.
+* If you modify an object used in the JSX, then it will change when the component re-renders.
 
 ---
 
 ## Practice Exercise - Displaying Data
 
 Update your application so that each section (locations, employees, owners) displays a list of cards with the API data.
+
+
+## Note about additional resources (like images)
+
+Additional resources can be included 2 ways:
+
+1. Include additional resources in the public directory. Everything in the public directory is automatically included with the published version of a react app. You can reference these items relative from the index file.
+
+> public/images
+```jsx
+<picture>
+  <img src={'/images/dog.svg'} alt="My Dog" />
+</picture>
+```
+
+2. Include additional resources with the development directories. In this case, you will need to either `import` or `require` the resource so that it will be compiled into the project. 
+
+> src/images
+```jsx
+<picture>
+  <img src={require('./dog.svg')} alt="My Dog" />
+</picture>
+```

@@ -4,7 +4,7 @@ set -u
 mkdir -p ./src/components/auth && cd $_
 
 echo 'import React, { useRef } from "react"
-import { useHistory } from "react-router-dom"
+import { useNavigate } from "react-router-dom"
 import "./Login.css"
 
 export const Register = ({setAuthUser}) => {
@@ -12,10 +12,11 @@ export const Register = ({setAuthUser}) => {
     const lastName = useRef()
     const email = useRef()
     const conflictDialog = useRef()
-    const history = useHistory()
+    const navigate = useNavigate()
+
 
     const existingUserCheck = () => {
-        return fetch(`http://localhost:5002/customers?email=${email.current.value}`)
+        return fetch(`http://localhost:8088/customers?email=${email.current.value}`)
             .then(res => res.json())
             .then(user => !!user.length)
     }
@@ -27,7 +28,7 @@ export const Register = ({setAuthUser}) => {
         existingUserCheck()
             .then((userExists) => {
                 if (!userExists) {
-                    fetch("http://localhost:5002/customers", {
+                    fetch("http://localhost:8088/customers", {
                         method: "POST",
                         headers: {
                             "Content-Type": "application/json"
@@ -40,8 +41,8 @@ export const Register = ({setAuthUser}) => {
                         .then(res => res.json())
                         .then(createdUser => {
                             if (createdUser.hasOwnProperty("id")) {
-                                setAuthUser(createdUser)
-                                history.push("/")
+                                //setAuthUser(createdUser)
+                                navigate("/")
                             }
                         })
                 }
@@ -63,19 +64,19 @@ export const Register = ({setAuthUser}) => {
             <form className="form--login" onSubmit={handleRegister}>
                 <h1 className="h3 mb-3 font-weight-normal">Please Register for NSS Kennels</h1>
                 <fieldset>
-                    <label htmlFor="firstName"> First Name </label>
+                    <label htmlFor="firstName">First Name</label>
                     <input ref={firstName} type="text" name="firstName" className="form-control" placeholder="First name" required autoFocus />
                 </fieldset>
                 <fieldset>
-                    <label htmlFor="lastName"> Last Name </label>
+                    <label htmlFor="lastName">Last Name</label>
                     <input ref={lastName} type="text" name="lastName" className="form-control" placeholder="Last name" required />
                 </fieldset>
                 <fieldset>
-                    <label htmlFor="inputEmail"> Email address </label>
+                    <label htmlFor="inputEmail">Email address</label>
                     <input ref={email} type="email" name="email" className="form-control" placeholder="Email address" required />
                 </fieldset>
                 <fieldset>
-                    <button type="submit"> Sign in </button>
+                    <button type="submit">Sign in</button>
                 </fieldset>
             </form>
         </main>
@@ -85,17 +86,16 @@ export const Register = ({setAuthUser}) => {
 
 echo 'import React, { useRef } from "react"
 import { Link } from "react-router-dom";
-import { useHistory } from "react-router-dom"
+import { useNavigate} from "react-router-dom"
 import "./Login.css"
-
 
 export const Login = ({setAuthUser}) => {
     const email = useRef()
     const existDialog = useRef()
-    const history = useHistory()
+    const navigate = useNavigate()
 
     const existingUserCheck = () => {
-        return fetch(`http://localhost:5002/customers?email=${email.current.value}`)
+        return fetch(`http://localhost:8088/customers?email=${email.current.value}`)
             .then(res => res.json())
             .then(user => user.length ? user[0] : false)
     }
@@ -107,7 +107,7 @@ export const Login = ({setAuthUser}) => {
             .then(exists => {
                 if (exists) {
                     setAuthUser(exists)
-                    history.push("/")
+                    navigate("/")
                 } else {
                     existDialog.current.showModal()
                 }
@@ -218,4 +218,5 @@ fieldset {
 }
 ' > ./Login.css
 
-curl https://raw.githubusercontent.com/nashville-software-school/client-side-mastery/master/book-4-nashville-kennels/chapters/images/logo.png > logo.png
+
+curl https://raw.githubusercontent.com/NSS-Day-Cohort-55/client-side-mastery/main/07-nashville-kennels/chapters/images/logo.png > logo.png

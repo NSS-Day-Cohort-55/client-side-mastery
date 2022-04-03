@@ -38,23 +38,20 @@ Just like loading the animals into the **`<AnimalList>`**, load one animal's det
 import React, { useState, useEffect } from 'react';
 import { getAnimalById } from '../../modules/AnimalManager';
 import './AnimalDetail.css';
-import { useParams, useHistory } from "react-router-dom"
+import { useParams, useNavigate } from "react-router-dom"
 
 export const AnimalDetail = () => {
   const [animal, setAnimal] = useState({ name: "", breed: "" });
 
   const {animalId} = useParams();
-  const history = useHistory();
+  const navigate = useNavigate();
 
   useEffect(() => {
     //getAnimalById(id) from AnimalManager and hang on to the data; put it into state
     console.log("useEffect", animalId)
     getAnimalById(animalId)
       .then(animal => {
-        setAnimal({
-          name: animal.name,
-          breed: animal.breed
-        });
+        setAnimal(animal);
       });
   }, [animalId]);
 
@@ -71,7 +68,7 @@ export const AnimalDetail = () => {
 
 
 ```
-Immediate properties of an empty object will not break if you try to reference that property but it doesn't actually exist, however nested properties of an empty object will. Use the [Optional chaining (?.)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining) operator to prevent nested values from breaking the code. Try replacing "name" with "foo" in the code above ( since location and customer don't have a "foo" property ). Try it with and without the ?. One will cause an error and the other won't.
+Immediate properties of an empty object will not break if you try to reference that property but it doesn't actually exist, however nested properties of an empty object will. Use the [Optional chaining (?.)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining) operator to prevent nested values from breaking the code. Try replacing "name" with "foo" in the code above (since location and customer don't have a "foo" property). Try it with and without the ?. One will cause an error and the other won't.
 
 ## Dynamic Route and Route Parameters
 
@@ -98,13 +95,9 @@ In this example, the value of `1` is captured by React Router and stored in an `
 
 ```jsx
 {/* Make sure you add the `exact` attribute here */}
-<Route exact path="/animals">
-  <AnimalList />
-</Route>
-
-<Route path="/animals/:animalId(\d+)">
-  <AnimalDetail />
-</Route>
+{/* Make sure you add the `exact` attribute here */}
+<Route exact path="/animals" element={<AnimalList />} />
+<Route path="/animals/:animalId" element={<AnimalDetail />} />
 
 {/*
   This is a new route to handle a URL with the following pattern:
@@ -150,7 +143,7 @@ Look back at the code you put in the detail component.
 
 See the `const {animalId} = useParams();`
 
-This is how you access the number 3 inside the component. Now, no matter which animal detail the user wants to view by clicking on any animal's detail link in the list of animals, this one path with match any and all of them, whether there are two animals or two million. It's part of the routing package (react-router-dom) you installed. Don't worry, that one's tricky. We'll help you remember it.
+This is how you access the number 3 inside the component. Now, no matter which animal detail the user wants to view by clicking on any animal's detail link in the list of animals, this one path with match any and all of them, whether there are two animals or two million. It's part of the routing package (react-router-dom) you installed.
 
 ApplicationViews includes the route for animal details. You will now support a route like the following.
 
