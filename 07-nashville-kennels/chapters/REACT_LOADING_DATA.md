@@ -15,7 +15,7 @@ Currently, this is the flow of code in your application:
 1. `Kennel.js` renders the `<NavBar>` and `<ApplicationViews>`
 1. `<NavBar>` contains links to other views
 1. `<ApplicationViews>` renders routes based on the URL.
-1. When viewing the Animals section, `AnimalCard.js` will be rendered`.
+1. When viewing the Animals section, `AnimalCard.js` will be rendered.
 1. Our page displays.
 
 
@@ -51,10 +51,7 @@ export const AnimalList = () => {
 
 ```jsx
 
-<Route exact path="/animals">
-    <AnimalList />
-</Route>
-
+<Route path="/animals" element={<AnimalList />} />
 
 ```
 
@@ -67,7 +64,7 @@ Other components, _in the future_, may need the ability to make their own API ca
 > src/modules/AnimalManager.js
 
 ```js
-const remoteURL = "http://localhost:5002"
+const remoteURL = "http://localhost:8088"
 
 export const getAnimalById = (animalId) => {
   //be sure your animals have good data and related to a location and customer
@@ -82,7 +79,7 @@ export const getAllAnimals = () => {
 
 ```
 
-Our `AnimalCard` does a great job of rendering a single animal, but our database has more than one animal. That's where the `AnimalList` component will come in. By the time we're done, it will initiate the AnimalManager `getAllAnimals()` call, hold on to the returned data, and then render the **`<AnimalCard />`** component for each animal.
+Our `AnimalCard` does a great job of rendering a single animal, but our database has more than one animal. That's where the `AnimalList` component will come in. By the time we're done, it will invoke the AnimalManager `getAllAnimals()` method, hold on to the returned data, and then render the **`<AnimalCard />`** component for each animal.
 
 When the data is returned, we can hold on to it by placing it in the component's `state`. _More on `state` later._
 
@@ -207,7 +204,7 @@ export const AnimalList = () => {
 
   const getAnimals = () => {
     // After the data comes back from the API, we
-    //  use the setAnimals function to update state
+    // use the setAnimals function to update state
     return getAllAnimals().then(animalsFromAPI => {
       setAnimals(animalsFromAPI)
     });
@@ -234,7 +231,7 @@ export const AnimalList = () => {
 
 What do we mean when we say a component "renders"? Rendering happens when a component returns HTML and then React puts that HTML onto the DOM.
 
-A component re-renders any time it's state changes. Re-rendering essentially means React calls the component function again,  takes whatever HTML it returns, and places it on the DOM.
+A component re-renders any time it's state changes. Re-rendering essentially means React calls the component function again, takes whatever HTML it returns, and places it on the DOM.
 
 ## Using Components within Components
 

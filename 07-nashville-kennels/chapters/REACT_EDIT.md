@@ -4,14 +4,14 @@ In this chapter, you are going to learn how to edit an animal's information. We 
 
 **_Quick Note_:** All of the code you will see from here to the end of this chapter needs to be in place before this feature will work.
 
-## Create the AnimalEditForm Component
+## Create the `AnimalEditForm` Component
 
 This component will populate the input fields with the current values from the API. We will obtain the animal details via a fetch call using a `useEffect()` hook.
 
 Here is the flow of the AnimalEditForm component:
 
 1. Component loads - Save button should be disabled since the data is not available yet.
-1. The function passed to `useEffect()` calls API to get the animal based on the animalId in the URL.
+1. The function passed to `useEffect()` calls API to get the animal based on the `animalId` in the URL.
 1. Data loads and `setAnimal()` is invoked with new data (also set `isLoading` to false)
 1. The component is rendered to the DOM, displaying animal details and ready for edits.
 1. Make changes. As changes are made, state is updated. 
@@ -23,17 +23,18 @@ Here is the flow of the AnimalEditForm component:
 > components/animal/AnimalEditForm.js
 
 ```jsx
-import React, { useState, useEffect } from "react"
-import { update, getAnimalById } from "../../modules/AnimalManager"
+import React, { useState, useEffect } from "react";
+import {useNavigate, useParams} from "react-router-dom";
+import { updateAnimal, getAnimalById } from "../../modules/AnimalManager"
 import "./AnimalForm.css"
-import { useParams, useHistory } from "react-router-dom"
+
 
 export const AnimalEditForm = () => {
   const [animal, setAnimal] = useState({ name: "", breed: "" });
   const [isLoading, setIsLoading] = useState(false);
 
   const {animalId} = useParams();
-  const history = useHistory();
+  const navigate = useNavigate();
 
   const handleFieldChange = evt => {
     const stateToChange = { ...animal };
@@ -56,8 +57,8 @@ export const AnimalEditForm = () => {
     };
 
   //pass the editedAnimal object to the database
-  AnimalManager.update(editedAnimal)
-    .then(() => history.push("/animals")
+  updateAnimal(editedAnimal)
+    .then(() => navigate("/animals")
     )
   }
 
@@ -115,18 +116,29 @@ export const AnimalEditForm = () => {
 Next, define a new route in **`<ApplicationViews>`** for editing a single animal. Be sure to import the **`<AnimalEditForm>`** component.
 
 ```jsx
-<Route path="/animals/:animalId(\d+)/edit">
-     {isAuthenticated ? <AnimalEditForm /> : <Redirect to="/login" />}
-</Route>
+<Route path="/animals/:animalId/edit" element={
+  <PrivateRoute>
+    <AnimalEditForm />
+  </PrivateRoute>
+} />
 ```
 
 You will also need to add `exact` to the route for `AnimalDetail`
 
 ```jsx
-<Route exact path="/animals/:animalId(\d+)">
-  {isAuthenticated ? <AnimalDetail /> : <Redirect to="/login" />}
-</Route>
+<Route exact path="/animals/:animalId" element={
+  <PrivateRoute>
+    <AnimalDetail />
+  </PrivateRoute>
+} />
 ```
+
+Finally import the AnimalEditForm into ApplicationViews.js
+
+```jsx
+import { AnimalEditForm } from './components/animal/AnimalEditForm'
+```
+
 
 At this point you should be able to see the edit animal form with a URL like this: `http://localhost:3000/animals/2/edit`
 
@@ -146,8 +158,6 @@ In the **`<AnimalCard>`** component, you will add a new button: `Edit`. When the
 
 At this point, view an AnimalCard. You should see the `Edit` button. Test it out.
 
-Oh no, **Error**. `TypeError: Cannot read property 'push' of undefined`. What is that? We need to import and `useHistory` from `react-router-dom` into the AnimalCard.
-
 > **NOTE:** It _still_ won't fully work yet...but we're close...
 
 ## Update method in AnimalManager
@@ -157,13 +167,13 @@ Oh no, **Error**. `TypeError: Cannot read property 'push' of undefined`. What is
 Finally, define a method in your `AnimalManager` for the update fetch call. You will use PUT in the HTTP request. This method will take the updated animal as an object and save to the database.
 
 ```js
-export const update = (animalObj) => {
+export const updateAnimal  = (editedAnimal) => {
 	return fetch(`${remoteURL}/animals/${animalObj.id}`, {
-		method: "PUT",
+		method: "PATCH",
 		headers: {
 			"Content-Type": "application/json"
 		},
-		body: JSON.stringify(animalObj)
+		body: JSON.stringify(editedAnimal)
 	}).then(data => data.json());
 }
 ```
@@ -182,3 +192,7 @@ Customer. You will need to include fetch calls for the list data and `useEffect`
 1. In the edit form components, fetch the data of the employee, location, or owner within a `useEffect()` and pre-fill the forms.
 1. Add the appropriate routes to `ApplicationViews` to render the edit form when the user clicks the edit button.
 1. Update **`<EmployeeManager>`**, **`<LocationManager>`** and **`<OwnerManager>`** with an `update` method to modify existing objects in the API.
+
+## Bonus Practice: Add Drop the dropdowns for Location and Customer
+1. Refer back to the AnimalForm and include dropdowns for Location and Customer. You will need to include fetch calls for the list data and useEffect.
+1. Make sure your data will support each of these requests. Double check your properties on each object and that they relate to good data.

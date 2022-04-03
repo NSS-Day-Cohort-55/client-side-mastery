@@ -1,20 +1,21 @@
-# React Router And History
+# Routing Part II: Navigate, Delete and isLoading
 
 ## Dynamically Changing the User's View
 
-It might be a nice feature to allow our users to discharge an animal from the animal details view. We've previously seen how this might be accomplished in the animal list view, but it turns out we will need to consider something we didn't need to think about in the list. Once an animal is discharged (deleted), it no longer makes sense to display its details. Instead, we will want to automatically redirect the user back to the animal list. We can do this with the routing package object called [history](https://github.com/ReactTraining/react-router/blob/master/packages/react-router/docs/api/history.md). On the history object, there is a method named `push()`.
+It might be a nice feature to allow our users to discharge an animal from the animal details view. We've previously seen how this might be accomplished in the animal list view, but it turns out we will need to consider something we didn't need to think about in the list. Once an animal is discharged (deleted), it no longer makes sense to display its details. Instead, we will want to automatically redirect the user back to the animal list. We can do this with the routing package object called `navigate`.
 
-If you push something on to the browser _history stack_, it will change the view.
+You set location state in two ways: on `<Link>` or `navigate`
 
-For example, the following code will change the URL in your browser to `http://localhost:3000/animals`, which triggers the routing package to find the matching **`<Route>`** definition in **`ApplicationViews`**. That route returns **`<AnimalList>`**, so we see a list of animals.
+
+For example, the following code will change the URL in your browser to http://localhost:3000/animals, which triggers the routing package to find the matching **<Route>** definition in **ApplicationViews**. That route returns **<AnimalList>**, so we see a list of animals.
 
 ```js
-history.push("/animals");
+navigate("/animals");
 ```
 
-You are going to invoke `push()` after an animal has been deleted and then redirect to the animal list.
+You are going to navigate back to the animals page after an animal has been discharged.
 
-## Add an 'isLoading" to the component
+## Add an `isLoading` to the component
 
 Consider the flow of code for the **`<AnimalDetails>`** component
 
@@ -41,7 +42,7 @@ export const AnimalDetail = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   const {animalId} = useParams();
-  const history = useHistory();
+  const navigate = useNavigate();
 
   useEffect(() => {
     //getAnimalById(id) from AnimalManager and hang on to the data; put it into state
@@ -60,7 +61,7 @@ export const AnimalDetail = () => {
     <section className="animal">
       <h3 className="animal__name">{animal.name}</h3>
       <div className="animal__breed">{animal.breed}</div>
-      {/* What's up with the question mark???? See below.*/}
+      {/* What's up with the question mark???? */}
       <div className="animal__location">Location: {animal.location?.name}</div>
       <div className="animal__owner">Customer: {animal.customer?.name}</div>
       <button type="button" disabled={isLoading} onClick={handleDelete}>
@@ -105,7 +106,7 @@ const handleDelete = () => {
   //invoke the delete function in AnimalManger and re-direct to the animal list.
   setIsLoading(true);
   deleteAnimal(animalId).then(() =>
-    history.push("/animals")
+    navigate("/animals")
   );
 };
 ```

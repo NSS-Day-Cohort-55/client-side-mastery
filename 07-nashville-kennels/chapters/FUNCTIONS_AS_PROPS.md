@@ -1,6 +1,6 @@
 # Passing Functionality as Props
 
-It's time to add one of the CRUD methods to your application. You're going to start with DELETE. Specifically, you're going to start with discharging animals to remove them from the kennel. You are going to add a Discharge link to each animal card.
+It's time to add one of the CRUD methods to your application. You're going to start with DELETE. Specifically, you're going to start with discharging animals to remove them from the kennel. You are going to add a "Discharge" link to each animal card.
 
 ## Implementation of Delete Function
 
@@ -9,7 +9,7 @@ It's time to add one of the CRUD methods to your application. You're going to st
 First add the `delete` function to your `AnimalManager` module.
 
 ```js
-export const deleteAnimal = (id) => {
+export const deleteAnimal = id => {
   return fetch(`${remoteURL}/animals/${id}`, {
     method: "DELETE"
   }).then(result => result.json())
@@ -92,7 +92,7 @@ export const AnimalCard = ({ animal, handleDeleteAnimal }) => {
     <div className="card">
       <div className="card-content">
         <picture>
-          <img src={require('./dog.svg')} alt="My Dog" />
+          <img src={'/images/dog.svg'} alt="My Dog" />
         </picture>
         <h3>Name: <span className="card-petname">
           {animal.name}

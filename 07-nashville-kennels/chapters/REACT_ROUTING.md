@@ -1,8 +1,18 @@
-# Routing in React Applications
+# Navigation Bar with Routing
 
 In a single page application, you are only rendering one DOM tree. You never request another HTML file but create/destroy components in the one you have. If you have multiple views in your application, a universal design pattern is to have a navigation element on the page for users to select and see different views.
 
-In React, you will use something called a Router to handle the rendering of different components when the user clicks on navigation items. This also allows users to bookmark specific places within a single page app.
+In React, you will use something called a Router to handle the rendering of different components when the user clicks on navigation items. This also allows users to bookmark specific places within a single page app. See the examples below:
+
+  
+![](./images/react-route-example-1.png)
+  
+  
+![](./images/react-route-example-2.png)
+
+  
+![](./images/react-route-example-3.png)
+
 
 ## Setup
 
@@ -79,6 +89,8 @@ export const NavBar = () => {
 
 Notice the use of the `<Link/>` component. This comes from the React Router package you installed. It has an attribute named `to`. It will render a hyperlink in your DOM, and when clicked, it will change the URL in the browser to the value of the `to` attribute.
 
+![](./images/react-route-example-4.png)
+
 ### Defining the Routes of the Application
 
 Now it's time to define the Routes for our application. In **`NavBar`**, you defined four **`<Link />`** components that will navigate to the routes of...
@@ -120,19 +132,18 @@ export const Home = () => (
 import React from "react"
 import { Route } from "react-router-dom"
 import { Home } from "./Home"
+import { AnimalCard } from './animal/AnimalCard.js'
 
 export const ApplicationViews = () => {
     return (
         <>
-            {/* Render the location list when http://localhost:3000/ */}
-            <Route exact path="/">
-                <Home />
-            </Route>
+            <Routes>
+                {/* Render the location list when http://localhost:3000/ */}
+                <Route exact path="/" element={<Home />} />
 
-            {/* Render the animal list when http://localhost:3000/animals */}
-            <Route path="/animals">
-              <AnimalCard />
-            </Route>
+                {/* Render the animal list when http://localhost:3000/animals */}
+                <Route path="/animals" element={<AnimalCard />} />
+            </Routes>
         </>
     )
 }
@@ -154,7 +165,7 @@ As mentioned above, **`Kennel`** is a container component. It renders no HTML it
 ```js
 import React from "react"
 import { NavBar } from "./nav/NavBar"
-import { ApplicationViews } from "./ApplicationViews"
+import { ApplicationViews } from "../ApplicationViews"
 import "./Kennel.css"
 
 export const Kennel = () => (
