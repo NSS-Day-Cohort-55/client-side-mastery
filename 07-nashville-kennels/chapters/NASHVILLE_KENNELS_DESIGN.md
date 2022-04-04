@@ -21,7 +21,7 @@ Lucky for you, your business managers have already talked to Nashville Kennels a
   - Each customer only visits 1 location
   - Add and Remove customers from the system
   - Edit a customer's information
-They need to keep track of the animals at their facilities.
+- They need to keep track of the animals at their facilities.
   - View all animals and which location they are at 
   - View a single animal and which location they are at
   - Add and Remove animals from the system
