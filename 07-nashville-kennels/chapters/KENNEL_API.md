@@ -50,7 +50,7 @@ Then copy the following JSON into the `database.json` file.
 Every time you want to work on your Nashville Kennels application, you'll need to ensure that the API is running.
 
 ```sh
-json-server -p 5002 -w database.json
+json-server -p 8088 -w database.json
 ```
 
 Go ahead and create a few more pets and customers within each's collections.
