@@ -181,20 +181,23 @@ Now update your `index.js` by adding a root component of `<Router />` which gets
 > ##### `src/index.js`
 
 ```js
-import React from "react"
-import ReactDOM from "react-dom"
+import React from 'react';
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
 import { BrowserRouter as Router } from "react-router-dom"
-import { Kennel } from "./components/Kennel.js"
-import "./index.css"
+import { Kennel } from './components/Kennel';
+import './index.css';
 
-ReactDOM.render(
-    <React.StrictMode>
-        <Router>
-            <Kennel />
-        </Router>
-    </React.StrictMode>,
-    document.getElementById("root")
-)
+const rootElement = document.getElementById("root");
+const root = createRoot(rootElement);
+
+root.render(
+  <StrictMode>
+    <Router>
+      <Kennel />
+    </Router>
+  </StrictMode>
+);
 ```
 
 With code in place, you should be able to navigate between multiple views and display different HTML representations.
