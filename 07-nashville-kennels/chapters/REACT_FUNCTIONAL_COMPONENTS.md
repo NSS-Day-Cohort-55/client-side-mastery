@@ -40,16 +40,19 @@ To display our `Kennel` component, we need to modify the `index.js` file. This f
 > ##### `src/index.js`
 
 ```js
-import React from "react"
-import ReactDOM from "react-dom"
-import { Kennel } from "./components/Kennel"
-import "./index.css"
+import React from 'react';
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
+import { Kennel } from './components/Kennel';
+import './index.css';
 
-ReactDOM.render(
-  <React.StrictMode>
+const rootElement = document.getElementById("root");
+const root = createRoot(rootElement);
+
+root.render(
+  <StrictMode>
     <Kennel />
-  </React.StrictMode>,
-  document.getElementById('root')
+  </StrictMode>
 );
 ```
 
