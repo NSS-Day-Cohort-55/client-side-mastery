@@ -50,7 +50,7 @@ export const Kennel = () => {
 
 ## Refactor NavBar Component
 
-When a user clicks on `logout`, we want to clear the user and direct to the home view. We can use react-router-dom's `history.push` method.
+When a user clicks on `logout`, we want to clear the user and direct to the home view. We can use react-router-dom's `Navigate` method.
 
 Since we are going to perform two steps, it makes sense to create a `handleLogout` method that is triggered when the logout button is clicked.
 
@@ -64,11 +64,11 @@ import { Link, useHistory } from "react-router-dom";
 import "./NavBar.css"
 
 export const NavBar = ({ clearUser, isAuthenticated }) => {
-    const history = useHistory()
+    const navigate = useNavigate()
 
     const handleLogout = () => {
         clearUser();
-        history.push('/');
+        navigate('/');
     }
 
     return (
