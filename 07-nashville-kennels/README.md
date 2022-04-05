@@ -23,11 +23,13 @@ In this book, you will be learning the concepts and tools of React. React is a c
 15 | [Edit Animal Details](./chapters/REACT_EDIT.md) | | Dropdown menus and edit Locations, Employees, and Customers
 16 | [React: Animal Spotlight and the useEffect Dependency Array](./chapters/REACT_USEEFFECT_DEPS.md) |<sub style="font-size:0.85rem;">#dependency array </sub> |
 17 |[React: Logout on Navbar Functionality](./chapters/REACT_LOGOUT_NAVBAR.md) | |
-18 | Group Project: | Nutshell 
+📖 | [Developer User Stories](./chapters/CHALLENGES_DevUserStories.md) | |
+🌰 | Group Project: | Nutshell 
 ##
 
-**Challenges**
-Note from your instructor: These challenges should be attempted only after the MVP of kennels is finished.  Kennels MVP includes completing all 17 chapters and building out all the functionality for animals, employees, locations and customers.
+### Challenges
+
+**Note from your instructor:** These challenges should be attempted only after the MVP of kennels is finished.  Kennels MVP includes completing all chapters and building out all the functionality for animals, employees, locations and customers.
 
 Since you are finished with the app, you may do these in any order.  Use the chapter numbers as a reference.
 
@@ -46,8 +48,6 @@ Since you are finished with the app, you may do these in any order.  Use the cha
  [Ch 14: Authentication](./chapters/CHALLENGES_AUTH.md)
 
  [Ch 15: Refactor/Reusable components in forms](./chapters/CHALLENGES_CH15.md)
- 
- [Example Dev User Stories](./chapters/CHALLENGES_DevUserStories.md)
 
 
 
