@@ -137,7 +137,7 @@ import { Link } from "react-router-dom";
 Once the browser reloads, click on the _Details_ hyperlink in the first card. It will change the URL in the browser to `http://localhost:3000/animals/1`, and the detail component for the animal will render.
 
 ### Dynamic Route
-You put :animalId(\d+) at the end of the URL to serve as a variable to hold the actual value that will be in the URL. For example, if the URL is http://localhost:3000/animals/detail/3, the value of 3 will be stored in that variable named `animalId`. The variable can then be accessed and used inside **`AnimalDetail`**.
+You put :animalId at the end of the URL to serve as a variable to hold the actual value that will be in the URL. For example, if the URL is http://localhost:3000/animals/detail/3, the value of 3 will be stored in that variable named `animalId`. The variable can then be accessed and used inside **`AnimalDetail`**.
 
 Look back at the code you put in the detail component.
 
