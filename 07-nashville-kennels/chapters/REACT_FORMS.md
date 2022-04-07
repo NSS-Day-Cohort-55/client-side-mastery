@@ -150,7 +150,7 @@ export const AnimalForm = () => {
 			//invoke addAnimal passing animal as an argument.
 			//once complete, change the url and display the animal list
 			addAnimal(animal)
-				.then(() => history.push("/animals"))
+				.then(() => navigate("/animals"))
 		}
 	}
 
