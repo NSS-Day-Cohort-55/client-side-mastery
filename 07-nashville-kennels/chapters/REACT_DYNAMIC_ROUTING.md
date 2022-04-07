@@ -87,16 +87,15 @@ http://localhost:3000/animals/1
 
 > **Vocabulary:** The `1` in the URL here is called a [route](https://jaketrent.com/post/access-route-params-react-router-v4/) [parameter](https://scotch.io/courses/using-react-router-4/route-params).
 
-Define the new route in the **`ApplicationViews`** component. Note that the keyword `exact` has been added to the `/animals` route. Without the `exact` keyword, the second route would also handle `/animals/:animalId`.
+Define the new route in the **`ApplicationViews`** component.
 
 In this example, the value of `1` is captured by React Router and stored in an `animalId` property of a specific namespace - `props.match.params.animalId`.
 
 > ApplicationViews.js
 
 ```jsx
-{/* Make sure you add the `exact` attribute here */}
-{/* Make sure you add the `exact` attribute here */}
-<Route exact path="/animals" element={<AnimalList />} />
+
+<Route path="/animals" element={<AnimalList />} />
 <Route path="/animals/:animalId" element={<AnimalDetail />} />
 
 {/*
