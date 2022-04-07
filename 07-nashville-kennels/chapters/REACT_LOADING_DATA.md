@@ -112,7 +112,7 @@ import { getAllAnimals, getAnimalById } from '../../modules/AnimalManager';
 
 export const AnimalList = () => {
   const getAnimals = () => {
-    return getAllAnimals().then(animalsFromAPI => {
+    getAllAnimals().then(animalsFromAPI => {
       // We'll do something more interesting with this data soon.
       console.log(animalsFromAPI);
     });
@@ -205,7 +205,7 @@ export const AnimalList = () => {
   const getAnimals = () => {
     // After the data comes back from the API, we
     // use the setAnimals function to update state
-    return getAllAnimals().then(animalsFromAPI => {
+    getAllAnimals().then(animalsFromAPI => {
       setAnimals(animalsFromAPI)
     });
   };
