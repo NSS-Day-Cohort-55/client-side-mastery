@@ -153,8 +153,3 @@ You will also now see a new entry in your session storage.
 ## Practice: No Content for You!
 
 Ensure that customers can't access locations, owners, or employees unless they submit authentication.
-
-
-[Return  to Book 6's Table of Contents](../README.md)
-
-[Ch 15: Edit Animal Details](./REACT_EDIT.md)
