@@ -115,7 +115,7 @@ Remember these Routes need to be added between your `<Routes>` and `</Routes>` t
 Finally, you will need to define which routes are private.  You do this by wrapping `<PrivateRoute>` tags around the component you are rendering.  For example in ApplicationViews.js your `/animals route should now look like:
 
 ```js
-<Route excat path="/animals" element={
+<Route path="/animals" element={
     <PrivateRoute>
         <AnimalList />
     </PrivateRoute>
