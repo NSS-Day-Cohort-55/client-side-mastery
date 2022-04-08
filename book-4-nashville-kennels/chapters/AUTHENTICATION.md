@@ -1,4 +1,4 @@
-Authentication and Conditional Rendering
+# Authentication and Conditional Rendering
 
 > **Instructor Note:** Authentication is not a learning objective of your time here at NSS. The code in this chapter is intended to be copied and used, but not understood for now. Your job is still to render UI components using related data.
 
