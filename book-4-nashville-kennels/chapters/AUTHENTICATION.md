@@ -108,8 +108,8 @@ Remember these Routes need to be added between your `<Routes>` and `</Routes>` t
 
 > ApplicationViews.js
 ```js
- <Route exact path="/login" element={<Login setAuthUser={setAuthUser} />} />
-<Route exact path="/register" element={<Register />} />
+<Route path="/login" element={<Login setAuthUser={setAuthUser} />} />
+<Route path="/register" element={<Register />} />
 ```
 
 Finally, you will need to define which routes are private.  You do this by wrapping `<PrivateRoute>` tags around the component you are rendering.  For example in ApplicationViews.js your `/animals route should now look like:
