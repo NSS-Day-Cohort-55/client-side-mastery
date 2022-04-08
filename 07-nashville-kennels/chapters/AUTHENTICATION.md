@@ -132,6 +132,7 @@ Finally, you will need to define which routes are private. You do this by wrappi
 ```
 Be sure to update your import statements. You'll need to add `Navigate` to your react-router-dom imports and the `Login` and `Register` components
 
+
 ```jsx
 import { Route, Routes, Navigate } from "react-router-dom"
 ```
